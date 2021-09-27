@@ -12,4 +12,43 @@
     - Also, used to deserialize means it allow parsed data to convet back to complex type after first validating
       incoming data.
 
+3. SerializerFields
+    - deals with validating input values, as well as retriving and setting values from parent objects.
+
+      syntax :
+      from rest_framework import serializers
+      Serializers.FieldName() eg, serializers.CharField()
+
+      Fields: 
+      1. CharField() - > validate text to be shorter than max_length
+          CharField(max_length=100,min_lenght=30,allow_blank=True,trim_whitespace=Fasle)
+      2. IntegerField() - > An integer Representation
+          IntegerField(max_value=None,min_value=None)
+      3. FloatField(max_value=None,min_value=None)
+      4. DecimalField(max_digits,decimal_places,corece_to_string=None,max_value=None,min_value=None)
+      5. EmailField(max_length=None,min_lenght=None,allow_blank=None) - > validate text to be valid e-mail address
+      7. BooleanField()
+      8. NullBooleanField()
+      9. URLField() - > RegexField that validate input against URL matching pattern. 
+      10. FileField(max_length=None,allow_empty_file=Fasle,use_url=UPLOADED_FILES_USE_URL) - > A file representation. Performs django standard FileField validation. 
+      11. ImageFIeld(max_value=None,min_lenght=None,allow_empty_file=False)
+      12. DateField()
+      13. TimeField()
+      14. DateTimeField()
+      15. DurationField()
+      16. RegexField()
+      17. UUIDField()
+      18. FilePathField()
+      19. IPAddressField()
+      20. ChoiceField()
+      21. MultipleChoiceField()
+      22. ListField()
+      23. DictField()
+      24. JSONField()
+      25. ReadOnlyField()
+      26. ModelField()
+      27. SerializerMethodField() ...etc...
+      
+
+
 
